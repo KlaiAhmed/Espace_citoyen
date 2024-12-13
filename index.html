@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>eWATHI9A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <div id="links">
+            <a href="login.html" class="link" id="login-btn">Login</a>
+            <a href="signup.html" class="link" id="signup-btn">Signup</a>
+            <span id="user-email" class="link" style="display:none;"></span> 
+        </div>
+    
+        <div id="logo">
+            <a href="#firstp">
+                <img src="resources/logo.png" id="logo">
+            </a>
+        </div>
+    </nav>
+
+    <div id="firstp">
+        <img src="resources/shape.png" id="shape" alt="Background Shape">
+        <img src="resources/img_1.png" id="img_f" alt="Foreground Image">
+
+        <div id="title-container">
+            <h2 id="title">شنية eWATHI9A ؟</h2>
+            <p id="paragraph">
+                منصة eWATHI9A هي منصة إلكترونية مبتكرة تهدف إلى تسهيل الحصول على الوثائق والخدمات الإدارية إلكترونيًا، مما يلغي الحاجة إلى زيارة المكاتب الحكومية. تعمل المنصة على تعزيز التواصل الرقمي بين البلديات والمواطنين، وتقديم حلول متطورة لتبسيط الإجراءات وتحسين تجربة المستخدم.
+            </p>
+        </div>
+    </div>
+
+    <section id="secp">
+        <div id="title_secp">
+            <h1 class="section-title">الخدمات الّي توفرها منصة eWATHI9A</h1>
+        </div>
+    
+        <div id="services-categories">
+            <div class="category-box">
+                <h2 class="category-title">خدمات الوثائق الشخصية</h2>
+                <div class="service-item" onclick="selectService('طلب استخراج شهادة ميلاد')">
+                    <h3>طلب استخراج شهادة ميلاد</h3>
+                    <p>إمكانية تقديم طلب للحصول على شهادة الميلاد بكل سهولة وبشكل إلكتروني.</p>
+                </div>
+                <div class="service-item" onclick="selectService('إصدار بطاقات التعريف الوطنية')">
+                    <h3>إصدار بطاقات التعريف الوطنية</h3>
+                    <p>تبسيط عملية التقديم للحصول على بطاقة التعريف الوطنية عبر المنصة.</p>
+                </div>
+                <div class="service-item" onclick="selectService('الحصول على شهادة الإقامة')">
+                    <h3>الحصول على شهادة الإقامة</h3>
+                    <p>خدمة إلكترونية للحصول على شهادة الإقامة بسرعة وسهولة.</p>
+                </div>
+            </div>
+    
+            <div class="category-box">
+                <h2 class="category-title">خدمات الأسرة</h2>
+                <div class="service-item" onclick="selectService('تجديد بطاقة العائلة')">
+                    <h3>تجديد بطاقة العائلة</h3>
+                    <p>إجراءات سلسة لتجديد بطاقة العائلة إلكترونيًا دون الحاجة لزيارة المكاتب.</p>
+                </div>
+                <div class="service-item" onclick="selectService('إضافة مولود جديد')">
+                    <h3>إضافة مولود جديد</h3>
+                    <p>خدمة مخصصة لإضافة بيانات المواليد الجدد بسهولة.</p>
+                </div>
+                <div class="service-item" onclick="selectService('تحديث بيانات الأسرة')">
+                    <h3>تحديث بيانات الأسرة</h3>
+                    <p>إمكانية تعديل وتحديث بيانات الأسرة إلكترونيًا.</p>
+                </div>
+            </div>
+    
+            <div class="category-box">
+                <h2 class="category-title">خدمات أخرى</h2>
+                <div class="service-item" onclick="selectService('تصحيح البيانات الشخصية')">
+                    <h3>تصحيح البيانات الشخصية</h3>
+                    <p>خدمة مخصصة لتصحيح الأخطاء في البيانات الشخصية بسرعة وكفاءة.</p>
+                </div>
+                <div class="service-item" onclick="selectService('الحصول على تصاريح السفر')">
+                    <h3>الحصول على تصاريح السفر</h3>
+                    <p>خدمة إلكترونية لتقديم طلبات تصاريح السفر.</p>
+                </div>
+                <div class="service-item" onclick="selectService('إصدار التوكيلات')">
+                    <h3>إصدار التوكيلات</h3>
+                    <p>تبسيط إصدار التوكيلات الرسمية إلكترونيًا.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="thirdp" style="display: none;">
+        <div id="selected-service-container">
+            <h2>الخدمة المختارة: <span id="selected-service"></span></h2>
+        </div>
+    
+        <div id="city-selection">
+            <h3>اختر المدينة:</h3>
+            <select id="city-dropdown" onchange="populateMunicipalities()">
+                <option value="">-- اختر المدينة --</option>
+                <option value="تونس">تونس</option>
+                <option value="صفاقس">صفاقس</option>
+                <option value="سوسة">سوسة</option>
+                <option value="أريانة">أريانة</option>
+                <option value="بن عروس">بن عروس</option>
+                <option value="منوبة">منوبة</option>
+                <option value="نابل">نابل</option>
+                <option value="بنزرت">بنزرت</option>
+                <option value="القيروان">القيروان</option>
+                <option value="المنستير">المنستير</option>
+                <option value="المهدية">المهدية</option>
+                <option value="قفصة">قفصة</option>
+                <option value="قابس">قابس</option>
+                <option value="مدنين">مدنين</option>
+                <option value="تطاوين">تطاوين</option>
+                <option value="الكاف">الكاف</option>
+                <option value="جندوبة">جندوبة</option>
+                <option value="سليانة">سليانة</option>
+                <option value="القصرين">القصرين</option>
+                <option value="زغوان">زغوان</option>
+                <option value="توزر">توزر</option>
+                <option value="قبلي">قبلي</option>
+                <option value="سيدي بوزيد">سيدي بوزيد</option>
+                <option value="باجة">باجة</option>
+            </select>
+        </div>
+    
+        <div id="municipality-selection" style="display: none;">
+            <h3>اختر البلدية:</h3>
+            <select id="municipality-dropdown"></select>
+            <button onclick="confirmSelection()">تأكيد</button>
+        </div>
+    
+        <div id="action-selection" style="display: none;">
+            <h3>اختر الإجراء:</h3>
+            <button onclick="downloadDocument()">تحميل الوثيقة</button>
+            <button onclick="showAppointmentScheduler()">حجز موعد</button>
+        </div>
+    
+        <div id="appointment-scheduler" style="display:none;">
+            <label for="appointment-date">اختر التاريخ:</label>
+            <input type="date" id="appointment-date">
+        
+            <label for="appointment-time">اختر الوقت:</label>
+            <select id="appointment-time"></select>
+        
+            <button onclick="confirmAppointment()">تأكيد الموعد</button>
+        </div>
+    </section>
+    
+    
+</body>
+</html>

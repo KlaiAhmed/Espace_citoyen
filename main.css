@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    padding-top: 65px; 
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 10%;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .link {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.navbar .link:hover {
+    background-color: white;
+    color: #1E90FF;
+    border: 2px solid #1E90FF;
+}
+
+#firstp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 65px);
+    padding: 30px;
+    background: linear-gradient(135deg, #1E90FF 50%, #87CEFA 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#img_f {
+    height: 70%;
+    z-index: 2;
+    margin-left: 30px;
+}
+
+#shape {
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    height: 90%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+#title-container {
+    text-align: right;
+    z-index: 2;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    direction: rtl;
+}
+
+#title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#paragraph {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#logo {
+    height: 35vh;
+}
+
+.section-title {
+    text-align: right;
+    font-size: 2.5rem;
+    color: #1E90FF;
+    margin: 50px 20px 20px; 
+    direction: rtl;
+    padding-bottom: 10px;
+}
+
+#services-categories {
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+.category-box {
+    width: 30%;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd; 
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: #1E90FF;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1E90FF; 
+    padding-bottom: 5px;
+}
+
+.service-item {
+    width: 90%;
+    background: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #1E90FF; 
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#thirdp {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#selected-service-container h2 {
+    font-size: 1.8rem;
+    color: #1E90FF;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#city-selection, #municipality-selection, #action-selection, #appointment-scheduler {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+select, input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+select:hover, input[type="date"]:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1E90FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #104E8B;
+    transform: translateY(-3px);
+}
+
+#municipality-selection button, #action-selection button {
+    width: auto;
+    direction: rtl;
+}
+
+#appointment-scheduler input[type="date"] {
+    width: 60%;
+    direction: rtl;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.selected-service {
+    border-left: 6px solid #32CD32; 
+    background-color: #f0fff0; 
+    transform: scale(1.02); 
+    transition: all 0.3s ease; 
+}
+
