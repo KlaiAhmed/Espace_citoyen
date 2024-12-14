@@ -9,17 +9,21 @@
     <script src="main.js"></script>
     
 </head>
+
 <body>
     <nav id="navbar" class="navbar">
         <div id="links">
             <a href="login.html" class="link" id="login-btn">Login</a>
             <a href="signup.html" class="link" id="signup-btn">Signup</a>
-            <span id="user-email" class="link" style="display:none;"></span> 
+            <span id="user-email" class="link" style="display:none;"></span>
         </div>
-    
+        <div id="contact">
+            <a href="help.html" class="link">Help</a>
+            <a id="personal" href="personal.html" class="link" style="display:none;">Personal</a>
+        </div>
         <div id="logo">
             <a href="#firstp">
-                <img src="resources/logo.png" id="logo">
+                <img src="resources/logo.png" id="logo-img" alt="Logo">
             </a>
         </div>
     </nav>
@@ -39,6 +43,7 @@
     <section id="secp">
         <div id="title_secp">
             <h1 class="section-title">الخدمات الّي توفرها منصة eWATHI9A</h1>
+            <h4 id="mini">قم بالضغط على الخدمة المناسبة</h4>
         </div>
     
         <div id="services-categories">
@@ -151,7 +156,6 @@
             <button onclick="confirmAppointment()">تأكيد الموعد</button>
         </div>
     </section>
-    
     
 </body>
 </html>

@@ -25,6 +25,12 @@ function displayCitySelection() {
 }
 
 function populateMunicipalities() {
+    const userEmail = localStorage.getItem("userEmail");
+    if (!userEmail) {
+        alert('No user data found. Please sign up first.');
+        return;
+    }
+
     const city = document.getElementById("city-dropdown").value;
     const municipalityDropdown = document.getElementById("municipality-dropdown");
     municipalityDropdown.innerHTML = ""; 
@@ -125,18 +131,65 @@ function confirmAppointment() {
 
 window.onload = function() {
     const userEmail = localStorage.getItem("userEmail");
-    
+
     if (userEmail) {
         document.getElementById("user-email").innerText = userEmail;
         document.getElementById("user-email").style.display = 'inline';
+        document.getElementById("personal").style.display = 'inline';
         document.getElementById("login-btn").style.display = 'none';
         document.getElementById("signup-btn").style.display = 'none';
+ 
     } else {
         document.getElementById("user-email").style.display = 'none';
-        document.getElementById("login-btn").style.display = 'inline'; 
+        document.getElementById("login-btn").style.display = 'inline';
         document.getElementById("signup-btn").style.display = 'inline';
+
     }
 };
-window.onbeforeunload = function() {
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const registerForm = document.getElementById('registerForm');
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const userData = {
+                cin: document.getElementById('cin').value,
+                firstname: document.getElementById('firstname').value,
+                lastname: document.getElementById('lastname').value,
+                dob: document.getElementById('dob').value,
+                birthplace: document.getElementById('birthplace').value,
+                gender: document.getElementById('gender').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
+
+            localStorage.setItem('userData', JSON.stringify(userData));
+
+            localStorage.setItem('userEmail', userData.email);
+
+            window.location.href = 'index.html';
+        });
+    }
+
+    const userData = JSON.parse(localStorage.getItem('userData'));
+        document.getElementById('display-cin').textContent = userData.cin || 'N/A';
+        document.getElementById('display-firstname').textContent = userData.firstname || 'N/A';
+        document.getElementById('display-lastname').textContent = userData.lastname || 'N/A';
+        document.getElementById('display-dob').textContent = userData.dob || 'N/A';
+        document.getElementById('display-birthplace').textContent = userData.birthplace || 'N/A';
+        document.getElementById('display-gender').textContent = userData.gender || 'N/A';
+        document.getElementById('display-email').textContent = userData.email || 'N/A';
+        document.getElementById('display-phone').textContent = userData.phone || 'N/A';
+
+    document.getElementById('edit-info')?.addEventListener('click', function () {
+        window.location.href = 'signup.html';
+    });
+});
+
+document.getElementById("logout-btn").addEventListener("click", function() {
     localStorage.clear();
-};
+    window.location.href = "index.html";
+});

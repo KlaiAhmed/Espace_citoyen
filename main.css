@@ -25,15 +25,38 @@ body {
     padding: 10px 20px;
     background-color: #1E90FF;
     color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#contact {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo img {
+    padding-top: 6px;
+    max-height: 170px;
+    width: auto;
 }
 
 .navbar .link {
     color: white;
     text-decoration: none;
-    margin-left: 15px;
     padding: 8px 16px;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -104,10 +127,20 @@ body {
     text-align: right;
     font-size: 2.5rem;
     color: #1E90FF;
-    margin: 50px 20px 20px; 
+    margin: 50px 20px; 
+    direction: rtl;
+
+}
+
+#mini{
+    text-align: right;
+    font-size: 1.5rem;
+    color:  #32CD32;
+    margin: 50px 20px 0px; 
     direction: rtl;
     padding-bottom: 10px;
 }
+
 
 #services-categories {
     display: flex;
