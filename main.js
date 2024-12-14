@@ -27,7 +27,7 @@ function displayCitySelection() {
 function populateMunicipalities() {
     const userEmail = localStorage.getItem("userEmail");
     if (!userEmail) {
-        alert('No user data found. Please sign up first.');
+        alert('الرجاء تسجيل الدخول.');
         return;
     }
 
