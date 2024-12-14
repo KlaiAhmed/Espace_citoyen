@@ -27,6 +27,7 @@ body {
     color: white;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
 }
 
 #links {
@@ -49,8 +50,8 @@ body {
 }
 
 #logo img {
-    padding-top: 6px;
-    max-height: 170px;
+    padding-top: 20px;
+    max-height: 150px;
     width: auto;
 }
 
@@ -72,6 +73,8 @@ body {
 }
 
 #firstp {
+    margin-top: 0;
+    padding-top: calc(var(--navbar-height, 65px));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,3 +282,95 @@ button:active {
     transition: all 0.3s ease; 
 }
 
+@media (max-width: 1024px) {
+    #navbar {
+        flex-direction: column;
+        height: 10%;
+    }
+
+    #links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contact {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #firstp {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #img_f {
+        height: 50%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #title-container {
+        width: 100%;
+        text-align: center;
+        direction: ltr;
+    }
+
+    #services-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-box {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #navbar {
+        height: 10%;
+        padding: 10px;
+    }
+
+    #logo img {
+        max-height: 120px;
+    }
+
+    .navbar .link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #firstp {
+        padding: 15px;
+    }
+
+    #services-categories {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-box {
+        width: 95%;
+    }
+
+    #thirdp {
+        padding: 20px;
+    }
+
+    #city-selection, #municipality-selection, #action-selection, #appointment-scheduler {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+
+    select, input[type="date"] {
+        width: 100%;
+    }
+}

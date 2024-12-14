@@ -49,10 +49,11 @@ body {
 }
 
 #logo img {
-    padding-top: 6px;
-    max-height: 170px;
+    padding-top: 20px;
+    max-height: 150px;
     width: auto;
 }
+
 
 .navbar .link {
     color: white;
@@ -126,4 +127,76 @@ body {
 
 #edit-info:hover {
     background-color: #187bcd;
+}
+
+@media (max-width: 1024px) {
+    #navbar {
+        height: 10%;
+        padding: 10px;
+    }
+
+    #links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contact {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #info-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    #personal-info {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    #personal-info h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    #edit-info {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        height: 10%;
+        padding: 10px;
+    }
+
+    #logo img {
+        max-height: 120px;
+    }
+
+    .navbar .link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #personal-info {
+        padding: 15px;
+    }
+
+    #personal-info h1 {
+        font-size: 1.5rem;
+    }
+
+    #info-container {
+        font-size: 0.9rem;
+    }
+
+    #edit-info {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
 }
