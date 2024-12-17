@@ -112,7 +112,7 @@ body {
     padding: 8px 0;
 }
 
-#edit-info {
+#adminedit-info {
     display: block;
     width: 200px;
     padding: 12px;
@@ -157,4 +157,3 @@ body {
     margin: 0 auto;
     transition: background-color 0.3s ease;
 }
-

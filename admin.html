@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Espace Citoyen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="personal.css">
-    <link rel="icon" href="resources/icon.png" type="image/x-icon">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace citoyen</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="admin.css">
+    <link rel="icon" href="resources\icon.png" type="image/x-icon">
 </head>
 <body>
+
     <nav id="navbar" class="navbar">
         <div id="links">
             <a href="login.html" class="link" id="login-btn">Login</a>
             <a href="signup.html" class="link" id="signup-btn">Signup</a>
+            <a href="adminlogin.html" class="link" id="admin_login" >Admin login</a>
+            <a href="adminsignup.html" class="link" id="admin_signup">Admin signup</a>
             <span id="user-email" class="link" style="display:none;"></span>
         </div>
         <div id="contact">
             <a href="help.html" class="link">مساعدة</a>
             <a id="personal" href="personal.html" class="link" style="display:none;">فضاء الحريف</a>
+            <a href="admin.html" class="link" id="admin-page" style="display:none;">فضاء الادارة</a>
         </div>
         <div id="logo">
             <a href="index.html">
-                <img src="resources/icon.png" id="logo-img" alt="Logo">
+                <img src="resources\icon.png" id="logo-img" alt="Logo">
             </a>
         </div>
     </nav>
 
     <section id="personal-info">
-        <h1>Your Personal Information</h1>
+        <h1>Your Organization Information</h1>
         <div id="info-container">
-            <p><strong>CIN:</strong> <span id="display-cin"></span></p>
-            <p><strong>First Name:</strong> <span id="display-firstname"></span></p>
-            <p><strong>Last Name:</strong> <span id="display-lastname"></span></p>
-            <p><strong>Date of Birth:</strong> <span id="display-dob"></span></p>
-            <p><strong>Place of Birth:</strong> <span id="display-birthplace"></span></p>
-            <p><strong>Gender:</strong> <span id="display-gender"></span></p>
+            <p><strong>Name:</strong> <span id="display-name"></span></p>
+            <p><strong>categorie:</strong> <span id="display-categorie"></span></p>
+            <p><strong>Number:</strong> <span id="display-number"></span></p>
             <p><strong>Email:</strong> <span id="display-email"></span></p>
-            <p><strong>Phone Number:</strong> <span id="display-phone"></span></p>
+            <p><strong>Location:</strong> <span id="display-location"></span></p>
         </div>
-        <button type="button" id="edit-info">Edit Information</button>
+        <button type="button" id="adminedit-info">Edit Information</button>
     </section>
 
     <section id="payment-info">
@@ -75,6 +74,6 @@
     </section>
 
     <button id="logout-btn">Logout</button>
-    <script src="main.js" defer></script>
+    <script src="admin.js"></script> >
 </body>
 </html>

@@ -14,13 +14,16 @@
 <body>
     <nav id="navbar" class="navbar">
         <div id="links">
-            <a href="login.html" class="link" id="login-btn">تسجيل الدخول</a>
-            <a href="signup.html" class="link" id="signup-btn">اشتراك</a>
+            <a href="login.html" class="link" id="login-btn">Login</a>
+            <a href="signup.html" class="link" id="signup-btn">Signup</a>
+            <a href="adminlogin.html" class="link" id="admin_login" >Admin login</a>
+            <a href="adminsignup.html" class="link" id="admin_signup">Admin signup</a>
             <span id="user-email" class="link" style="display:none;"></span>
         </div>
         <div id="contact">
             <a href="help.html" class="link">مساعدة</a>
-            <a id="personal" href="personal.html" class="link" style="display:none;">Personal</a>
+            <a id="personal" href="personal.html" class="link" style="display:none;">فضاء الحريف</a>
+            <a href="admin.html" class="link" id="admin-page" style="display:none;">فضاء الادارة</a>
         </div>
         <div id="logo">
             <a href="#firstp">
@@ -51,8 +54,8 @@
             <div class="category-box">
                 <h2 class="category-title">خدمات الوثائق الشخصية</h2>
                 <div class="service-item" onclick="selectService('طلب استخراج شهادة ميلاد')">
-                    <h3>طلب استخراج شهادة ميلاد</h3>
-                    <p>إمكانية تقديم طلب للحصول على شهادة الميلاد بكل سهولة وبشكل إلكتروني.</p>
+                    <h3>طلب استخراج مضمون ولادة </h3>
+                    <p>إمكانية تقديم طلب للحصول على مضمون ولادة بكل سهولة وبشكل إلكتروني.</p>
                 </div>
                 <div class="service-item" onclick="selectService('إصدار بطاقات التعريف الوطنية')">
                     <h3>إصدار بطاقات التعريف الوطنية</h3>
@@ -108,9 +111,9 @@
             <h3>اختر المدينة:</h3>
             <select id="city-dropdown" onchange="populateMunicipalities()">
                 <option value="">-- اختر المدينة --</option>
+                <option value="سوسة">سوسة</option>
                 <option value="تونس">تونس</option>
                 <option value="صفاقس">صفاقس</option>
-                <option value="سوسة">سوسة</option>
                 <option value="أريانة">أريانة</option>
                 <option value="بن عروس">بن عروس</option>
                 <option value="منوبة">منوبة</option>
@@ -143,7 +146,7 @@
     
         <div id="action-selection" style="display: none;">
             <h3>اختر الإجراء:</h3>
-            <button onclick="downloadDocument()">تحميل الوثيقة</button>
+            <button onclick="downloadDocument()">الطلب عبر الإنترنت </button>
             <button onclick="showAppointmentScheduler()">حجز موعد</button>
         </div>
     
