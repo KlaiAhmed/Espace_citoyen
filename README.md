@@ -1,4 +1,12 @@
-The Espace Citoyen Platform is an innovative web application designed to simplify access to administrative documents and services electronically, eliminating the need for in-person visits to government offices. The platform enhances digital communication between municipalities and citizens, offering advanced solutions to streamline procedures and improve the overall user experience.
+  <picture>
+    <img src="resources/icon.png"
+         alt="espace_citoyen" width="150" height="150"/>
+  </picture>
+  
+Espace Citoyen is a university mini-project that reimagines how citizens interact with their local governments. This web application provides:
+
+Fully Digital Document Access: Citizens can request, submit, and retrieve official administrative documents (e.g., birth certificates, residency attestations) directly through the platform—no more in-person queues or snail-mail delays.
+
+Streamlined Service Requests: From paying municipal fees to scheduling appointments, every interaction is handled online with real-time status updates and built-in validation checks to prevent common errors.
 
 
-(uni mini project)
